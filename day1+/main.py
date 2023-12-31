@@ -63,7 +63,7 @@ while is_donee == False:
         player_turn = True
         while player_turn == True:
             print(f"You have drawn {player1,player2}\ncomputer's first card is {computer1}")
-            draw=input("type 'y' if you would like to draw another card and 'n' if you do not want to do so: ")
+            draw = input("type 'y' if you would like to draw another card and 'n' if you do not want to do so: ")
             if draw == "y":
                 cardd = deal()
                 player.append(cardd)
