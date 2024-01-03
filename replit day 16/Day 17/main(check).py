@@ -39,8 +39,8 @@ while is_done == False:
     number = random.randint(1, len(question_data)-1)
     question_asking = Question(question_data[number]["text"], question_data[number]["answer"], correct)
     questions = input(f"{question_number}) {question_asking.question}\nAnswer 'True' or 'False': ").title()
-    Question.check_answer(questions)
-    question_data.remove(number)
+    question_asking.check_answer(questions)
+    question_data.remove(question_data[number])
     if len(question_data) == 0:
         is_done = True
     else:

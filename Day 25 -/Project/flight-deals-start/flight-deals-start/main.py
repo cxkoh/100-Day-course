@@ -22,7 +22,7 @@ if sheet_data[0]["iataCode"] == "":
     data_manager.update_destination_codes()
 
 # i need to work on this next time
-for destination in sheet_dacdcdta:
+for destination in sheet_data:
     flight = flightsearch.check_flight(
         origin_city,
         destination["iataCode"],
@@ -36,7 +36,7 @@ for destination in sheet_dacdcdta:
 
 
 '''
-#  5. In main.py check if sheet_data contains any values for the "iataCode" key.
+#  5. In selenium.py check if sheet_data contains any values for the "iataCode" key.
 #  If not, then the IATA Codes column is empty in the Google Sheet.
 #  In this case, pass each city name in sheet_data one-by-one
 #  to the FlightSearch class to get the corresponding IATA code
